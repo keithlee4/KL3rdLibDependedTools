@@ -20,13 +20,13 @@ extension UIViewController {
             minimumDisplayTime: nil
         )
         
-        DispatchQueue.main.async ({
+        DispatchQueue.main.async (execute: {
             NVActivityIndicatorPresenter.sharedInstance.startAnimating(data)
         })
     }
     
     func hideIndicator() {
-        DispatchQueue.main.async ({
+        DispatchQueue.main.async (execute: {
             NVActivityIndicatorPresenter.sharedInstance.stopAnimating()
         })
     }
